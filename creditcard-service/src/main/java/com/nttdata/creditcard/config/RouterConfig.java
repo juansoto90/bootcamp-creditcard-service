@@ -14,6 +14,8 @@ public class RouterConfig {
     public RouterFunction<ServerResponse> routes(CreditCardHandler handler){
         return route(GET("/creditcard/{id}"), handler::findById)
                 .andRoute(GET("/creditcard/customer/{documentNumber}"), handler::findByCustomerDocumentNumber)
-                .andRoute(POST("/creditcard"), handler::create);
+                .andRoute(GET("/creditcard/card-number/{cardNumber}"), handler::findByCardNumber)
+                .andRoute(POST("/creditcard/credit"), handler::creditCardCreate)
+                .andRoute(POST("/creditcard/debit"), handler::debitCardCreate);
     }
 }

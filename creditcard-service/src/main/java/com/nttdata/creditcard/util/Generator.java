@@ -6,8 +6,8 @@ import java.util.Random;
 public class Generator {
     private static Random random = new Random(System.currentTimeMillis());
 
-    public static String generateCreditCardNumber() {
-        String bin = "4556";
+    public static String generateCreditCardNumber(String cardType) {
+        String bin = cardType.equals("CREDIT") ? "4556" : "4557";
 
         StringBuilder b = new StringBuilder(bin);
         for (int i = 0; i <= 11; i++) {

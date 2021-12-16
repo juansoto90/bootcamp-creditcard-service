@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Customer {
     private String id;
-    private String customerIdNumber;
     private String customerType;
     private String documentType;
     private String documentNumber;

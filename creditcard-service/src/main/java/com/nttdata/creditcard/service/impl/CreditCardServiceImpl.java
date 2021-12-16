@@ -26,6 +26,11 @@ public class CreditCardServiceImpl implements ICreditCardService {
     }
 
     @Override
+    public Mono<CreditCard> findByCardNumber(String cardNumber) {
+        return repository.findByCardNumber(cardNumber);
+    }
+
+    @Override
     public Mono<CreditCard> save(CreditCard creditCard) {
         return repository.save(creditCard);
     }

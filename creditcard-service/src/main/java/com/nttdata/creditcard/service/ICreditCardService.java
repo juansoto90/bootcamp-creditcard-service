@@ -9,5 +9,6 @@ import java.util.List;
 public interface ICreditCardService {
     public Mono<CreditCard> findById(String id);
     public Flux<CreditCard> findByCustomerDocumentNumber(String documentNumber);
+    public Mono<CreditCard> findByCardNumber(String cardNumber);
     public Mono<CreditCard> save(CreditCard creditCard);
 }
